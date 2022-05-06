@@ -18,7 +18,7 @@ public class TestBase {
     public static String EmailValue= "aaa"+x+"@gmail.com";
 
     public static WebDriver driver;
-    @BeforeAll
+    @Before
 
     public static void launchBrowser()
     {
@@ -29,7 +29,7 @@ public class TestBase {
 
     }
 
-    @AfterAll
+    @After
 
     public static void closeBrowser()
     {
