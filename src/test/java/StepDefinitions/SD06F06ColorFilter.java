@@ -28,19 +28,16 @@ public class SD06F06ColorFilter {
     }
 
     @And("User Filter with Color")
-    public void filterWithColor()
-    {
+    public void filterWithColor() {
         colorFilter.selectColor();
         CurrentPageURL = TestBase.driver.getCurrentUrl();
         System.out.println("URL is : "+CurrentPageURL );
         ColorId = TestBase.driver.findElement(P06F06ColorFilter.color).getAttribute("data-option-id");
-
     }
 
     @Then("Filtered Products are Displayed")
     public void listFilteredProducts()
     {
-
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(CurrentPageURL.contains("specs="+ColorId));
         softAssert.assertAll();

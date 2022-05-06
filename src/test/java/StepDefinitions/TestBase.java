@@ -15,17 +15,18 @@ public class TestBase {
 
     static Random random = new Random();
     static int x = random.nextInt(900) + 100;
-    public static String EmailValue= "aaa"+x+"@gmail.com";
+    public static String EmailValue= "user"+x+"@gmail.com";
 
     public static WebDriver driver;
     @Before
 
     public static void launchBrowser()
     {
-        System.out.println("From Test Base : "+EmailValue);
+
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.navigate().to("https://demo.nopcommerce.com/");
+        driver.manage().window().maximize();
 
     }
 
