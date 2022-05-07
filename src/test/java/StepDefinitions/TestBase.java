@@ -18,8 +18,8 @@ public class TestBase {
     public static String EmailValue= "user"+x+"@gmail.com";
 
     public static WebDriver driver;
-    @Before
 
+    @Before
     public static void launchBrowser()
     {
 
@@ -31,7 +31,6 @@ public class TestBase {
     }
 
     @After
-
     public static void closeBrowser()
     {
         driver.quit();

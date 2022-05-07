@@ -23,8 +23,8 @@ public class SD05SelectCategory {
     }
 
     @And("User Select Sub Category")
-    public void selectSubCategory()
-    {
+    public void selectSubCategory() throws InterruptedException {
+        Thread.sleep(1000);
         WebElement subCategory = TestBase.driver.findElement(P05SelectCategory.SubCategoryLocator);
 
          SubCategoryValue = subCategory.getText();

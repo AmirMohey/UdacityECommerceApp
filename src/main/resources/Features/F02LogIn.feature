@@ -1,7 +1,6 @@
+
+
 Feature: Test Sign Up , Log In and Reset Password
-
-
-
 
   Scenario:  User could log in with valid email and password
 

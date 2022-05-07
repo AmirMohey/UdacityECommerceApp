@@ -1,5 +1,6 @@
 
-Feature: Logged user could add different products to Shopping cart
+Feature: Logged user could add different products to compare list
+
 
   Background: User Should be Logged In
     When User Navigated to Log In Page
@@ -9,16 +10,17 @@ Feature: Logged user could add different products to Shopping cart
     Given User Hover Categories
     And User Select Sub Category
     Then User Opened Sub Category Page
+    And User Select Product Item 1
 
 
-  Scenario: add different products to Shopping cart
-    Given User Select Product Item 1
-    When User Add Product Item 1 to Shopping cart
+  Scenario: add different products to Wishlist
+
+    Given User Add Product Item 1 to Compare List
     And Back To Home Page
     And User Select Another Category
     And User Select Product Item 2
-    And User Add Product Item 2 to Shopping cart
-    Then Product Item 2 Added Successfully
+    Then User Add Product Item 2 to Compare List
+
 
 
 
