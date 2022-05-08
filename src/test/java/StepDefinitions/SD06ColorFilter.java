@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 
-public class SD06F06ColorFilter {
+public class SD06ColorFilter {
     Actions actions = new Actions(TestBase.driver);
     P06F06ColorFilter colorFilter = new P06F06ColorFilter();
     String CurrentPageURL;
@@ -23,8 +23,6 @@ public class SD06F06ColorFilter {
         WebElement subCategory = TestBase.driver.findElement(P06F06ColorFilter.SubCategoryLocator);
         actions.moveToElement(subCategory).click();
         actions.build().perform();
-
-
     }
 
     @And("User Filter with Color")
@@ -38,8 +36,8 @@ public class SD06F06ColorFilter {
     @Then("Filtered Products are Displayed")
     public void listFilteredProducts()
     {
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(CurrentPageURL.contains("specs="+ColorId));
-        softAssert.assertAll();
+
+        TestBase.softAssert.assertTrue(CurrentPageURL.contains("specs="+ColorId));
+        TestBase.softAssert.assertAll();
     }
 }

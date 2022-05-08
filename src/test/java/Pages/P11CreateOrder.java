@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 
 public class P11CreateOrder {
+    public static By ShippingCartPageLocator = By.cssSelector("#topcartlink > a");
     public static By CountryLocator =By.id("BillingNewAddress_CountryId");
     public static By city = By.id("BillingNewAddress_City");
     public static By Address = By.id("BillingNewAddress_Address1");

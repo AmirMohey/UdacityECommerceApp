@@ -2,6 +2,7 @@ package Pages;
 import StepDefinitions.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class P02LogInPage {
 
@@ -15,6 +16,7 @@ public class P02LogInPage {
     By logInBtn = By.className("login-button");
     By logOut = By.className("ico-logout");
     public void clickLogIn() {
+        TestBase.wait.until(ExpectedConditions.visibilityOfElementLocated(logIn));
         TestBase.driver.findElement(logIn).click();
     }
 

@@ -9,7 +9,7 @@ public class P08ShoppingCart {
     public static By RAM = By.id("product_attribute_2");
     public static By AddItem1ToCart = By.id("add-to-cart-button-1");
     public static By SuccessMessage = By.className("content");
-    public static By CloseSuccessMessageIcon = By.className("close");
+    public static By CloseSuccessMessageIcon = By.cssSelector("#bar-notification > div > span");
     public static By HomePage = By.cssSelector("div.header-logo > a");
     public static By Category2Locator = By.partialLinkText("Books");
     public static  By Item2Locator=  By.partialLinkText("First Prize Pies");

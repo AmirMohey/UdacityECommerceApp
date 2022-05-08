@@ -1,8 +1,5 @@
-Pages\LogInPage.class
 StepDefinitions\SD02LogIn.class
-Pages\ResetPasswordPage.class
-StepDefinitions\SD01ResetPassword.class
-Pages\RegistrationPage.class
 Runner\TestRunner.class
 StepDefinitions\SD00Registration.class
 StepDefinitions\TestBase.class
+StepDefinitions\SD01ResetPassword.class

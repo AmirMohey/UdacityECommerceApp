@@ -38,7 +38,6 @@ public class SD02LogIn {
     {
 
         WebElement logOut = TestBase.driver.findElement(By.className("ico-logout"));
-
         Assert.assertTrue( logOut.isDisplayed());
     }
 

@@ -1,4 +1,4 @@
-
+@Smoke
 Feature: Logged User can Create Successful Order
 
 

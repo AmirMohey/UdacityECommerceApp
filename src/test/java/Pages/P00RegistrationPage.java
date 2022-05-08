@@ -2,6 +2,7 @@ package Pages;
 
 import StepDefinitions.TestBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class P00RegistrationPage {
 
@@ -25,7 +26,7 @@ public class P00RegistrationPage {
 
     public void clickRegister() {
 
-        //   wait.until(ExpectedConditions.visibilityOfElementLocated(registerLink);
+        TestBase.wait.until(ExpectedConditions.visibilityOfElementLocated(registerLink));
         TestBase.driver.findElement(registerLink).click();
     }
 
@@ -57,7 +58,7 @@ public class P00RegistrationPage {
 
     public void enableNewsletter() {
 
-        //   wait.until(ExpectedConditions.visibilityOfElementLocated(registerLink);
+
         TestBase.driver.findElement(Newsletter).click();
     }
 
@@ -71,10 +72,6 @@ public class P00RegistrationPage {
         TestBase.driver.findElement(ConfirmPassword).sendKeys(password);
     }
 
-    public void DOB()
-    {
-        // driver.findElement(dob).sendKeys("10");
-    }
 
     public void confirmRegistration() {
 

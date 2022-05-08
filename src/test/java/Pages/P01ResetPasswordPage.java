@@ -5,6 +5,7 @@ package Pages;
 import StepDefinitions.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class P01ResetPasswordPage {
@@ -18,12 +19,13 @@ public class P01ResetPasswordPage {
     By alertMessage = By.className("close");
 
 
-    public void clickLogOut()
-    {
-        TestBase.driver.findElement(logOut).click();
-    }
+//    public void clickLogOut()
+//    {
+//        TestBase.driver.findElement(logOut).click();
+//    }
 
-    public void clickLogIn() throws InterruptedException {
+    public void clickLogIn() {
+        TestBase.wait.until(ExpectedConditions.visibilityOfElementLocated(logIn));
         TestBase.driver.findElement(logIn).click();
     }
 
@@ -43,6 +45,7 @@ public class P01ResetPasswordPage {
 
     public void closeAlertMessage()
     {
+        TestBase.wait.until(ExpectedConditions.visibilityOfElementLocated(alertMessage));
         TestBase.driver.findElement(alertMessage).click();
     }
 

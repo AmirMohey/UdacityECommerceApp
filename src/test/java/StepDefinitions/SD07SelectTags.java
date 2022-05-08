@@ -26,11 +26,9 @@ public class SD07SelectTags {
         String Expected = "Products tagged with '" +TagValue+ "'";
         String Actual = TagResult ;
         System.out.println("Expected : "+Expected  +"\n" +"Actual   : "+Actual);
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(TagResult.contains(TagValue));
-        softAssert.assertEquals(Expected , Actual);
-
-        softAssert.assertAll();
+        TestBase.softAssert.assertTrue(TagResult.contains(TagValue));
+        TestBase.softAssert.assertEquals(Expected , Actual);
+        TestBase.softAssert.assertAll();
     }
 
 }
